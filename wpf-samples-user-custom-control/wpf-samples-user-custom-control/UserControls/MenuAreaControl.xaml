@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="wpf_samples_user_custom_control.UserControls.MenuAreaControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:wpf_samples_user_custom_control.UserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0" >メニュー</Label>
+        <ListView x:Name="listView" SelectedIndex="{Binding SelectedIndexOfListView}" Grid.Row="1" >
+            <ListViewItem>
+                <TextBlock>AAA</TextBlock>
+            </ListViewItem>
+            <ListViewItem>
+                <TextBlock>BBB</TextBlock>
+            </ListViewItem>
+            <ListViewItem>
+                <TextBlock>CCC</TextBlock>
+            </ListViewItem>
+        </ListView>
+    </Grid>
+</UserControl>

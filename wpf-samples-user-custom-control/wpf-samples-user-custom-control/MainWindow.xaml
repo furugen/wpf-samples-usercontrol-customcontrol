@@ -1,0 +1,44 @@
+﻿<Window xmlns:ig="http://schemas.infragistics.com/xaml"  x:Class="wpf_samples_undoredo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:wpf_samples_undoredo"
+        
+        xmlns:usercontrols="clr-namespace:wpf_samples_user_custom_control.UserControls"
+
+        xmlns:igWPF="http://schemas.infragistics.com/xaml/wpf"
+        mc:Ignorable="d"
+        Title="MainWindow"  Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100" x:Name="leftMenuArea"></ColumnDefinition>
+            <ColumnDefinition Width="10"></ColumnDefinition>
+            <ColumnDefinition Width="80*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="10"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <!-- Menu Area -->
+        <usercontrols:MenuAreaControl Grid.Row="0" Grid.Column="0" >
+        </usercontrols:MenuAreaControl>
+
+        <GridSplitter Grid.Column="1" Width="10" HorizontalAlignment="Center" />
+
+
+        <!-- EditArea -->
+        <usercontrols:EditAreaControl Grid.Row="0" Grid.Column="2">
+        </usercontrols:EditAreaControl>
+        
+        
+        <!-- HistoryArea -->
+        <usercontrols:HistoryAreaControl Grid.Row="2" Grid.ColumnSpan="3" >
+        </usercontrols:HistoryAreaControl>
+
+
+
+    </Grid>
+</Window>
